@@ -1,0 +1,11 @@
+{% extends "comic/layout.html" %}
+
+{% block body %}
+    <h1>Home of the Xkcd Comic</h1> 
+    <br>  
+    <p>Our Latest Comic</p>
+    <p>Month :{{ month }},
+    Year: {{ year}},
+    Title : {{ Title }}</p>
+    <p><img src="{{image}}" alt="{{ altText }}"></p>
+{% endblock %}
