@@ -1,4 +1,5 @@
 import requests
+
 #This is out business logic for getting the data from xkcd.com
 
 
