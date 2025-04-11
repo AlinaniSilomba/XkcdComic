@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from . import businesslogic
+from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
@@ -20,3 +21,13 @@ def index(request):
         'image': image
         
     })
+    
+    #Get the previous comic
+def previous(request,pk):
+    if request.method == 'POST':
+        comic = int(request.POST.get(pk))
+        image = comic['img']
+    return render(request, 'comic/index.html',{
+        'image': image      
+    })
+    

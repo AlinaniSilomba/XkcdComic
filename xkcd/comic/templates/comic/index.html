@@ -1,11 +1,30 @@
 {% extends "comic/layout.html" %}
 
 {% block body %}
-    <h1>Home of the Xkcd Comic</h1> 
+<!-- SECTION: Heading -->
+    <h1 class="Display-1">Home of the Xkcd Comic</h1> 
+<!-- SECTION: Heading End-->
     <br>  
-    <p>Our Latest Comic</p>
-    <p>Month :{{ month }},
-    Year: {{ year}},
-    Title : {{ Title }}</p>
-    <p><img src="{{image}}" alt="{{ altText }}"></p>
+<!-- SECTION: Leading Paragraph -->
+    <p class="lead">Our Latest Comic</p>
+    <br/>
+<!-- SECTION: Leading Paragraph End -->
+    <!-- Display Comic Button -->
+     
+     <div class= "center">
+    <button id="prev" onclick="previous()">Previous</button>
+    <button id="next" onclick="nextComic()">Next</button>
+    </div>
+
+    <br/>
+
+    <!-- Display the comic details -->
+        
+        Month :{{ month }},
+        Year: {{ year}},
+        Title : {{ Title }}</p>
+        <br/>
+        <img src="{{image}}" class="rounded mx-auto d-block" alt="{{ altText }}">
+    
+
 {% endblock %}
