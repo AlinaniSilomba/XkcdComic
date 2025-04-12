@@ -9,22 +9,24 @@
     <p class="lead">Our Latest Comic</p>
     <br/>
 <!-- SECTION: Leading Paragraph End -->
-    <!-- Display Comic Button -->
-     
-     <div class= "center">
-    <button id="prev" onclick="previous()">Previous</button>
-    <button id="next" onclick="nextComic()">Next</button>
-    </div>
 
+<!-- SECTION:  Display Comic Buttons -->
+    <form method="POST">
+         {% csrf_token %}
+        <button id="prev" type="submit">Previous</button>
+        <button id="next" type="submit" >Next</button>
+    </form> 
+<!-- SECTION: Display Comic Buttons End-->
     <br/>
 
     <!-- Display the comic details -->
-        
+        <!--Do something here to make this centered and pretty in the middle of page-->
         Month :{{ month }},
         Year: {{ year}},
         Title : {{ Title }}</p>
         <br/>
+<!--This is the image of the comic from xkcd comic -->
         <img src="{{image}}" class="rounded mx-auto d-block" alt="{{ altText }}">
-    
+<!--End of Display  -->
 
 {% endblock %}
