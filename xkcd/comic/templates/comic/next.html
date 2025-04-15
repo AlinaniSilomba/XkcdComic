@@ -2,7 +2,7 @@
 
 {% block body %}
 <!-- SECTION: Heading -->
-    <h1 class="text-center">Home of the Xkcd Comic</h1> 
+<h1 class="text-center">Home of the Xkcd Comic</h1> 
 <!-- SECTION: Heading End-->
     <br>  
 <!-- SECTION: Leading Paragraph -->
@@ -12,26 +12,6 @@
 <br/>
 <!-- SECTION: Leading Paragraph End -->
 
-<<<<<<< HEAD
-<!-- SECTION:  Display Comic Buttons -->
-    <form method="POST">
-         {% csrf_token %}
-        <button id="prev" type="submit">Previous</button>
-        <button id="next" type="submit" >Next</button>
-    </form> 
-<!-- SECTION: Display Comic Buttons End-->
-    <br/>
-
-    <!-- Display the comic details -->
-        <!--Do something here to make this centered and pretty in the middle of page-->
-        Month :{{ month }},
-        Year: {{ year}},
-        Title : {{ Title }}</p>
-        <br/>
-<!--This is the image of the comic from xkcd comic -->
-        <img src="{{image}}" class="rounded mx-auto d-block" alt="{{ altText }}">
-<!--End of Display  -->
-=======
 <!-- INCASE YOU ARE SEEING THIS IN 2026! Chances are i have quit this Job 
 This next section is pretty cringe in its implemementation feel free to crap at me Lol 
 Thinking of a better and intuitive way of putting it please don't shout use react -->
@@ -46,6 +26,5 @@ Thinking of a better and intuitive way of putting it please don't shout use reac
     <br/>
     <img src="{{image}}" class="rounded mx-auto d-block" alt="{{ altText }}">
 </div>
->>>>>>> dev
 
 {% endblock %}
